@@ -42,7 +42,7 @@ pipeline {
             when {
                 branch 'master'
             }
-            enviroment {
+            environment {
                 CANARY_REPLICAS = 1
             }
             steps {
@@ -58,8 +58,8 @@ pipeline {
             when {
                 branch 'master'
             }
-             enviroment {
-                CANARY_REPLICAS = 1
+             environment {
+                CANARY_REPLICAS = 0
             }
             steps {
                 input 'Deploy to Production?'
